@@ -16,7 +16,7 @@ Display Height = 512
 
 Keyboard polling is taken from the Mars I/O prompt.
 
-![image-20210923180553801](Board.png)
+![image-20210923180553801](images/Board.png)
 
 ### HOW DOES IT WORK
 
@@ -29,15 +29,15 @@ Carrier_location_y    1    2    3    4    5
 After setup, the program prompts the user with a description of Normal Mode and Salvo mode, and then prompts for their choice. Salvo is when an entire fleet fires all at once, so if chosen the user will give the coordinates for the ship’s “Weapons Systems”, for each ship that is alive ( format is X: letter coordinate, Y: Number coordinate). So, if the user has 4 ships left, then they get 4 shots, and once they submit their shots they are fired. After they are fired, the AI takes a turn and gives a random coordinate (or one near a ship if there is a previous hit). The same rule of number of ships = number of sots for the AI, and this is why this mode is my favorite, because it is challenging. If you find a ship, you can assign all your ships to attack that area, while your opponent has not found your ships, so it becomes a fleet versus a single ship. This makes it very easy to lose the edge in this mode, because if the AI targets a ship, your fleet can be crippled in a few rounds.
 Normal Mode gets one coordinate from the User, fires, and gets one coordinate from the AI, and fires. It is important to note that there is no overlapping of the coordinates, if a coordinate has already been fired upon, it cannot be targeted again. For both modes, once the shot(s) are fired the hit markers are refreshed on the screen from the 2D Hit Map Arrays, and displayed as White for a miss, and Red for a hit.  
 
-![image-20210923180553801](FlowChart1.png)
+![image-20210923180553801](images/FlowChart1.png)
 
 FlowChart 1
 
-![image-20210923180553801](FlowChart2.png)
+![image-20210923180553801](images/FlowChart2.png)
 
 FlowChart 2
 
-![image-20210923180553801](FlowChart3.png)
+![image-20210923180553801](images/FlowChart3.png)
 
 FlowChart 3
 
@@ -49,7 +49,7 @@ There were a lot of challenges to this project, the total length of the code (as
 
 See figure 2 for an example of this with the User Aircraft Carrier. There is data for Total Hits for a carrier, number of hits left, name of ship, printing data (not used, but will be if I revisit this code. Will be used for different ship designs), and the ship’s location x array, and ship’s location y array. The data in these ships structured is changed with a function like Write_Hits which needs the label to the ship and data to write with, and will call Write_Ship_Data with the selection of which data to write to and then will access that data and write with data given. All Write_Data functions call Write_Ship_Data to deal with where to store the data given to write with. The same goes for Access_Hits, it will call Access_Ship_Data and do something similar. This is the same procedure for all of the access/write data functions.
 
-![image-20210923180903951](CarrierData.png)
+![image-20210923180903951](images/CarrierData.png)
 
 Figure 2
 
