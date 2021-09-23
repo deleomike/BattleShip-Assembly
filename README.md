@@ -4,6 +4,14 @@
 
 ## 2016
 
+### About
+
+Language: MIPS Assembly
+
+How to run: You'll need java runtime environment. Run the mars5_4.jar program and select the .asm file
+
+This is my sophomore final project for my assembly class in which we had to design games in assembly. I completed this in about two weeks. Enjoy!
+
 ### WHAT IS THIS GAME
 
 BattleShip is a two-player game, where each player has a board with coordinates A-K (x axis), and 1-9 (y axis) and five ships each (Aircraft Carrier, Battleship, Submarine, Cruiser, Destroyer). The objective of the game is to eliminate the opponents ships by hitting every section of every ship they have. Admiral Edition is what I call this version, because it has Salvo Mode (as is explained earlier).
